@@ -1132,6 +1132,8 @@ static int __Pyx_init_co_variables(void) {
 /* Early includes */
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <time.h>
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -2204,6 +2206,10 @@ static int __Pyx_State_RemoveModule(void*);
 
 /* Module declarations from "libc.stdlib" */
 
+/* Module declarations from "libc.stddef" */
+
+/* Module declarations from "libc.time" */
+
 /* Module declarations from "calc_pi" */
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
@@ -2305,7 +2311,7 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_n_u_values __pyx_string_tab[21]
 #define __pyx_n_u_x __pyx_string_tab[22]
 #define __pyx_n_u_y __pyx_string_tab[23]
-#define __pyx_kp_b_iso88591_1_U_1_D_2Q_D_2Q_1ARr_2Rq_3b_A __pyx_string_tab[24]
+#define __pyx_kp_b_iso88591_1_aq_U_1_D_2Q_D_2Q_1ARr_2Rq_3b __pyx_string_tab[24]
 /* #### Code section: module_state_clear ### */
 #if CYTHON_USE_MODULE_STATE
 static CYTHON_SMALL_CODE int __pyx_m_clear(PyObject *m) {
@@ -2359,9 +2365,9 @@ return 0;
 #endif
 /* #### Code section: module_code ### */
 
-/* "calc_pi.pyx":4
- * cimport cython
- * from libc.stdlib cimport rand, RAND_MAX
+/* "calc_pi.pyx":5
+ * from libc.stdlib cimport srand, rand, RAND_MAX
+ * from libc.time cimport time
  * @cython.boundscheck(False) # Disable bounds checking for performance             # <<<<<<<<<<<<<<
  * @cython.wraparound(False) # Disable negative indexing for performance
  * 
@@ -2406,32 +2412,32 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   {
     PyObject ** const __pyx_pyargnames[] = {&__pyx_mstate_global->__pyx_n_u_n,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? __Pyx_NumKwargs_FASTCALL(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 4, __pyx_L3_error)
+    if (unlikely(__pyx_kwds_len) < 0) __PYX_ERR(0, 5, __pyx_L3_error)
     if (__pyx_kwds_len > 0) {
       switch (__pyx_nargs) {
         case  1:
         values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 4, __pyx_L3_error)
+        if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 5, __pyx_L3_error)
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "calc_pi_cython", 0) < (0)) __PYX_ERR(0, 4, __pyx_L3_error)
+      if (__Pyx_ParseKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "calc_pi_cython", 0) < (0)) __PYX_ERR(0, 5, __pyx_L3_error)
       for (Py_ssize_t i = __pyx_nargs; i < 1; i++) {
-        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("calc_pi_cython", 1, 1, 1, i); __PYX_ERR(0, 4, __pyx_L3_error) }
+        if (unlikely(!values[i])) { __Pyx_RaiseArgtupleInvalid("calc_pi_cython", 1, 1, 1, i); __PYX_ERR(0, 5, __pyx_L3_error) }
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_ArgRef_FASTCALL(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 4, __pyx_L3_error)
+      if (!CYTHON_ASSUME_SAFE_MACROS && unlikely(!values[0])) __PYX_ERR(0, 5, __pyx_L3_error)
     }
-    __pyx_v_n = __Pyx_PyLong_As_int(values[0]); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 7, __pyx_L3_error)
+    __pyx_v_n = __Pyx_PyLong_As_int(values[0]); if (unlikely((__pyx_v_n == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 8, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calc_pi_cython", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 4, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calc_pi_cython", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 5, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2471,18 +2477,27 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calc_pi_cython", 0);
 
-  /* "calc_pi.pyx":9
+  /* "calc_pi.pyx":10
  * def calc_pi_cython(int n):
  *     cdef:
  *         int i, h = 0             # <<<<<<<<<<<<<<
  *         double x, y
- *     for i in range(n):
+ *     srand(time(NULL)) # Seed the random number generator with the current time
 */
   __pyx_v_h = 0;
 
-  /* "calc_pi.pyx":11
+  /* "calc_pi.pyx":12
  *         int i, h = 0
  *         double x, y
+ *     srand(time(NULL)) # Seed the random number generator with the current time             # <<<<<<<<<<<<<<
+ *     for i in range(n):
+ *         x = rand() / RAND_MAX # Generate a random x coordinate
+*/
+  srand(time(NULL));
+
+  /* "calc_pi.pyx":13
+ *         double x, y
+ *     srand(time(NULL)) # Seed the random number generator with the current time
  *     for i in range(n):             # <<<<<<<<<<<<<<
  *         x = rand() / RAND_MAX # Generate a random x coordinate
  *         y = rand() / RAND_MAX # Generate a random y coordinate
@@ -2492,8 +2507,8 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "calc_pi.pyx":12
- *         double x, y
+    /* "calc_pi.pyx":14
+ *     srand(time(NULL)) # Seed the random number generator with the current time
  *     for i in range(n):
  *         x = rand() / RAND_MAX # Generate a random x coordinate             # <<<<<<<<<<<<<<
  *         y = rand() / RAND_MAX # Generate a random y coordinate
@@ -2502,11 +2517,11 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_4 = rand();
     if (unlikely(RAND_MAX == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 12, __pyx_L1_error)
+      __PYX_ERR(0, 14, __pyx_L1_error)
     }
     __pyx_v_x = (((double)__pyx_t_4) / ((double)RAND_MAX));
 
-    /* "calc_pi.pyx":13
+    /* "calc_pi.pyx":15
  *     for i in range(n):
  *         x = rand() / RAND_MAX # Generate a random x coordinate
  *         y = rand() / RAND_MAX # Generate a random y coordinate             # <<<<<<<<<<<<<<
@@ -2516,11 +2531,11 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_4 = rand();
     if (unlikely(RAND_MAX == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 13, __pyx_L1_error)
+      __PYX_ERR(0, 15, __pyx_L1_error)
     }
     __pyx_v_y = (((double)__pyx_t_4) / ((double)RAND_MAX));
 
-    /* "calc_pi.pyx":15
+    /* "calc_pi.pyx":17
  *         y = rand() / RAND_MAX # Generate a random y coordinate
  *         # Check if the point (x, y) is inside the unit circle
  *         if x*x + y*y < 1.:             # <<<<<<<<<<<<<<
@@ -2530,7 +2545,7 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_5 = (((__pyx_v_x * __pyx_v_x) + (__pyx_v_y * __pyx_v_y)) < 1.);
     if (__pyx_t_5) {
 
-      /* "calc_pi.pyx":16
+      /* "calc_pi.pyx":18
  *         # Check if the point (x, y) is inside the unit circle
  *         if x*x + y*y < 1.:
  *             h += 1             # <<<<<<<<<<<<<<
@@ -2539,7 +2554,7 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
 */
       __pyx_v_h = (__pyx_v_h + 1);
 
-      /* "calc_pi.pyx":15
+      /* "calc_pi.pyx":17
  *         y = rand() / RAND_MAX # Generate a random y coordinate
  *         # Check if the point (x, y) is inside the unit circle
  *         if x*x + y*y < 1.:             # <<<<<<<<<<<<<<
@@ -2549,7 +2564,7 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
     }
   }
 
-  /* "calc_pi.pyx":18
+  /* "calc_pi.pyx":20
  *             h += 1
  *     # Estimate Pi using the ratio of points inside the circle to the total points
  *     return 4. * h / n             # <<<<<<<<<<<<<<
@@ -2558,17 +2573,17 @@ static PyObject *__pyx_pf_7calc_pi_calc_pi_cython(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_6 = (4. * __pyx_v_h);
   if (unlikely(__pyx_v_n == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 18, __pyx_L1_error)
+    __PYX_ERR(0, 20, __pyx_L1_error)
   }
-  __pyx_t_7 = PyFloat_FromDouble((__pyx_t_6 / ((double)__pyx_v_n))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble((__pyx_t_6 / ((double)__pyx_v_n))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 20, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_r = __pyx_t_7;
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "calc_pi.pyx":4
- * cimport cython
- * from libc.stdlib cimport rand, RAND_MAX
+  /* "calc_pi.pyx":5
+ * from libc.stdlib cimport srand, rand, RAND_MAX
+ * from libc.time cimport time
  * @cython.boundscheck(False) # Disable bounds checking for performance             # <<<<<<<<<<<<<<
  * @cython.wraparound(False) # Disable negative indexing for performance
  * 
@@ -2933,25 +2948,25 @@ __Pyx_RefNannySetupContext("PyInit_calc_pi", 0);
   (void)__Pyx_modinit_function_import_code(__pyx_mstate);
   /*--- Execution code ---*/
 
-  /* "calc_pi.pyx":4
- * cimport cython
- * from libc.stdlib cimport rand, RAND_MAX
+  /* "calc_pi.pyx":5
+ * from libc.stdlib cimport srand, rand, RAND_MAX
+ * from libc.time cimport time
  * @cython.boundscheck(False) # Disable bounds checking for performance             # <<<<<<<<<<<<<<
  * @cython.wraparound(False) # Disable negative indexing for performance
  * 
 */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7calc_pi_1calc_pi_cython, 0, __pyx_mstate_global->__pyx_n_u_calc_pi_cython, NULL, __pyx_mstate_global->__pyx_n_u_calc_pi, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7calc_pi_1calc_pi_cython, 0, __pyx_mstate_global->__pyx_n_u_calc_pi_cython, NULL, __pyx_mstate_global->__pyx_n_u_calc_pi, __pyx_mstate_global->__pyx_d, ((PyObject *)__pyx_mstate_global->__pyx_codeobj_tab[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x030E0000
   PyUnstable_Object_EnableDeferredRefcount(__pyx_t_2);
   #endif
-  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_calc_pi_cython, __pyx_t_2) < (0)) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_mstate_global->__pyx_d, __pyx_mstate_global->__pyx_n_u_calc_pi_cython, __pyx_t_2) < (0)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "calc_pi.pyx":1
  * # cython: language_level=3             # <<<<<<<<<<<<<<
  * cimport cython
- * from libc.stdlib cimport rand, RAND_MAX
+ * from libc.stdlib cimport srand, rand, RAND_MAX
 */
   __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -3018,17 +3033,25 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
 static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   {
-    const struct { const unsigned int length: 7; } index[] = {{1},{11},{20},{18},{7},{14},{18},{8},{1},{1},{13},{5},{8},{10},{1},{8},{3},{12},{12},{10},{8},{6},{1},{1},{81}};
-    #if (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (221 bytes) */
-const char* const cstring = "x\332MNKj\3030\024\354'\005\247\311\306\320\013\264\007\0108=@\td]RC\327\203\362\242\020QYr,\251\330\273.\265|\307\313\322G\350\021\372\240\246\364-\346\315030/\244,\2415\253v\350\201\235\300n\330\032\212x\325}\254\365Q\205\301\221\361+\362\235O\3218\035\246\302\364@C<yGV,\030\207\330)\322{E\037\30019\002N\006&\340\257n\242n\002\320(\311\3125\376\220\254\006D8\325\010i}\013\234\223\262\277\022\010:N\226\260\203\014J6\002Q\007\301Oe\223\016\375\360u\375}\1775\177\340j\234\025\371.\277\363#W\227b\231\267|\313k~\373G\307b\221\253\274\311u\356\270\224\330\232k>_\226%\227\343l\221\237\363\236o\370\2117?)`l%";
-    PyObject *data = __Pyx_DecompressString(cstring, 221, 1);
+    const struct { const unsigned int length: 7; } index[] = {{1},{11},{20},{18},{7},{14},{18},{8},{1},{1},{13},{5},{8},{10},{1},{8},{3},{12},{12},{10},{8},{6},{1},{1},{92}};
+    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (268 bytes) */
+const char* const cstring = "BZh91AY&SY9\023\3248\000\000\024\377\343\376|$\0004\0018\000\244\001r\000\277o\377`@@@\000\000@@\000@\0000\000\331\233\021F\201\240\000\000\000\000\000\000\324\321=\"f\247\202@\031\000\000\001\243@\320J<\243A\240\000\000\000\321\246\217\n;H\372\362\204DM\004\3169\\F \257y\302s%\367\341\024\201\353D\221\213\244\241\352\206\241d\204f*\242\232 \254?\306\340\313n\014D&4\220\006\234)}b\214\232O\023\260\225j;5\337\014\211\335\r0\304\371\310J\373>\252R(\335\036\340\030\017\000\264\254\211\271a\252\231&\212\022\224\224\204\215\207\031\nd\205\327I\201KZ\301\220.\340\027\313\rp0\251\350s\306 ^4\330l\300\031\3142\002\370\347\221\205`4`\202>\022\230\234T\332h\327P\352\300\263n\274j\273\270\216\026\244u=\357\t\010\224\333\360I\022\312\313\370\273\222)\302\204\201\310\236\241\300";
+    PyObject *data = __Pyx_DecompressString(cstring, 268, 2);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #else /* compression: none (278 bytes) */
-const char* const bytes = "?calc_pi.pyx__Pyx_PyDict_NextRefasyncio.coroutinescalc_picalc_pi_cythoncline_in_traceback__func__hi_is_coroutineitems__main____module__n__name__pop__qualname____set_name__setdefault__test__valuesxy\200\001\360\n\000\t\024\2201\340\004\010\210\005\210U\220!\2201\330\010\014\210D\220\003\2202\220Q\330\010\014\210D\220\003\2202\220Q\340\010\013\2101\210A\210R\210r\220\021\220!\2202\220R\220q\330\014\021\220\021\340\004\013\2103\210b\220\002\220\"\220A";
+    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (229 bytes) */
+const char* const cstring = "x\332MNKj\3030\024\354\307\005\247\311\306\320\013\264d\035pz\200\022\310\272\244\206\256\007EQ\210\250,\331\226T\354]\227o\371\216\347\245\217\320#TPS\372\026\363f\230\031\230\027)\214D\2437\315\320\003\207\004\207a\257e\300\253\352C\245\316\302\017Vj\267\221\256s1h\253\374\\\230\037\344\020.\316J\223,h\213\320\t\251\216B~\000\347h%p\321\320\036\177u\035T\355\201Z\244l\272\332\235\242Q@\022V\324\2114\256\001\332(\314\257\004\274\n\263\225\330)\r\212&\000A\371\204\237\302D\345\373\341\353\372\373\376j\361\300\345\224-\250\2405\tj\307,\247;z\347G.\307|E{\276\345-\277\375\243S\276\244\222vTQ\307E\212m\271\342v\\\025\\L\331\222\236\351\3107\374\304\273\037\352\212p1";
+    PyObject *data = __Pyx_DecompressString(cstring, 229, 1);
+    if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
+    const char* const bytes = __Pyx_PyBytes_AsString(data);
+    #if !CYTHON_ASSUME_SAFE_MACROS
+    if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
+    #endif
+    #else /* compression: none (289 bytes) */
+const char* const bytes = "?calc_pi.pyx__Pyx_PyDict_NextRefasyncio.coroutinescalc_picalc_pi_cythoncline_in_traceback__func__hi_is_coroutineitems__main____module__n__name__pop__qualname____set_name__setdefault__test__valuesxy\200\001\360\n\000\t\024\2201\340\004\t\210\021\210$\210a\210q\330\004\010\210\005\210U\220!\2201\330\010\014\210D\220\003\2202\220Q\330\010\014\210D\220\003\2202\220Q\340\010\013\2101\210A\210R\210r\220\021\220!\2202\220R\220q\330\014\021\220\021\340\004\013\2103\210b\220\002\220\"\220A";
     PyObject *data = NULL;
     CYTHON_UNUSED_VAR(__Pyx_DecompressString);
     #endif
@@ -3109,9 +3132,9 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
   PyObject* tuple_dedup_map = PyDict_New();
   if (unlikely(!tuple_dedup_map)) return -1;
   {
-    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 5, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 4};
+    const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 5, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 5};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_n, __pyx_mstate->__pyx_n_u_i, __pyx_mstate->__pyx_n_u_h, __pyx_mstate->__pyx_n_u_x, __pyx_mstate->__pyx_n_u_y};
-    __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_calc_pi_pyx, __pyx_mstate->__pyx_n_u_calc_pi_cython, __pyx_mstate->__pyx_kp_b_iso88591_1_U_1_D_2Q_D_2Q_1ARr_2Rq_3b_A, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_calc_pi_pyx, __pyx_mstate->__pyx_n_u_calc_pi_cython, __pyx_mstate->__pyx_kp_b_iso88591_1_aq_U_1_D_2Q_D_2Q_1ARr_2Rq_3b, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
   }
   Py_DECREF(tuple_dedup_map);
   return 0;
