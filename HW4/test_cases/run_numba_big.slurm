@@ -25,11 +25,11 @@ for p in 1 2 4 8 16
 do
     echo "Running numba with $p workers"
 
-    output=$(python benchmark.py --method numba --workers $p --N $N --bins $BINS)
+    output=$(python run_numba_once.py --workers $p --N $N --bins $BINS)
 
     echo "$output"
 
-    runtime=$(echo "$output" | awk '/Runtime:/ {print $(NF-1); exit}')
+    runtime=$(echo "$output" | awk '/Runtime:/ {print $2; exit}')
 
     echo "numba,$p,$BINS,$N,$runtime" >> numba_scaling.csv
 done
