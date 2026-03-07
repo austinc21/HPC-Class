@@ -1,0 +1,294 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"mpi"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "mpi"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+Running bins=10 workers=1
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.384 seconds
+Samples per second: 26056983
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Running bins=10 workers=2
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.282 seconds
+Samples per second: 35460565
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.282 seconds
+Samples per second: 35411765
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Running bins=10 workers=4
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.239 seconds
+Samples per second: 41805292
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.242 seconds
+Samples per second: 41397953
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.299 seconds
+Samples per second: 33490051
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.298 seconds
+Samples per second: 33528066
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Running bins=10 workers=8
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.245 seconds
+Samples per second: 40769569
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.303 seconds
+Samples per second: 33031842
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.303 seconds
+Samples per second: 32949661
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.289 seconds
+Samples per second: 34645917
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.262 seconds
+Samples per second: 38117839
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.277 seconds
+Samples per second: 36074418
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.278 seconds
+Samples per second: 35935304
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 10
+Runtime: 0.286 seconds
+Samples per second: 34987375
+Results saved to lorentzian_histogram_bins10_ranks1.txt
+Running bins=100 workers=1
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.183 seconds
+Samples per second: 54754712
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Running bins=100 workers=2
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.279 seconds
+Samples per second: 35780647
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.281 seconds
+Samples per second: 35566078
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Running bins=100 workers=4
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.260 seconds
+Samples per second: 38460552
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.278 seconds
+Samples per second: 35992754
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.267 seconds
+Samples per second: 37500874
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.293 seconds
+Samples per second: 34075432
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Running bins=100 workers=8
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.208 seconds
+Samples per second: 47968289
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.245 seconds
+Samples per second: 40770283
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.208 seconds
+Samples per second: 48106933
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.249 seconds
+Samples per second: 40147484
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.300 seconds
+Samples per second: 33286991
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.301 seconds
+Samples per second: 33247781
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.277 seconds
+Samples per second: 36068430
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 100
+Runtime: 0.279 seconds
+Samples per second: 35826858
+Results saved to lorentzian_histogram_bins100_ranks1.txt
+Running bins=1000 workers=1
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.185 seconds
+Samples per second: 53976023
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Running bins=1000 workers=2
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.278 seconds
+Samples per second: 35986331
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.277 seconds
+Samples per second: 36157170
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Running bins=1000 workers=4
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.267 seconds
+Samples per second: 37479595
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.268 seconds
+Samples per second: 37254521
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.299 seconds
+Samples per second: 33405497
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.301 seconds
+Samples per second: 33178769
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Running bins=1000 workers=8
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.251 seconds
+Samples per second: 39829337
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.266 seconds
+Samples per second: 37537960
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.260 seconds
+Samples per second: 38465067
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.282 seconds
+Samples per second: 35418852
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.246 seconds
+Samples per second: 40612061
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.280 seconds
+Samples per second: 35652784
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.267 seconds
+Samples per second: 37393920
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
+Total samples: 10000000
+Ranks: 1
+Bins: 1000
+Runtime: 0.286 seconds
+Samples per second: 34965033
+Results saved to lorentzian_histogram_bins1000_ranks1.txt
