@@ -4,11 +4,10 @@
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 16
-#SBATCH -t 00:10:00
+#SBATCH -t 00:30:00
 #SBATCH --exclusive
 
 module purge
-module load python
 
 source /home/jac190017/miniconda3/etc/profile.d/conda.sh
 conda activate HW4
@@ -23,13 +22,7 @@ echo "method,workers,bins,N,runtime" > numba_scaling.csv
 
 for p in 1 2 4 8 16
 do
-    echo "Running numba with $p workers"
-
     output=$(python run_numba_once.py --workers $p --N $N --bins $BINS)
-
-    echo "$output"
-
-    runtime=$(echo "$output" | awk '/Runtime:/ {print $2; exit}')
-
+    runtime=$(echo "$output" | awk '/Runtime:/ {print $2}')
     echo "numba,$p,$BINS,$N,$runtime" >> numba_scaling.csv
 done

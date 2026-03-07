@@ -11,9 +11,6 @@ args = parser.parse_args()
 
 set_num_threads(args.workers)
 
-# warmup
-lorentzian_histogram_numba(1000, bins=args.bins, n_chunks=1)
-
 start = time.perf_counter()
 lorentzian_histogram_numba(args.N, bins=args.bins, n_chunks=args.workers)
 runtime = time.perf_counter() - start
