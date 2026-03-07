@@ -1,0 +1,46 @@
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fb788657400 (most recent call first):
+  <no Python frame>
+Running numba with 1 workers
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f991e6f0740 [python] (most recent call first):
+  <no Python frame>
+
+Running numba with 2 workers
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fdcdae1e740 [python] (most recent call first):
+  <no Python frame>
+
+Running numba with 4 workers
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fb9c46d3740 [python] (most recent call first):
+  <no Python frame>
+
+Running numba with 8 workers
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f41f229c740 [python] (most recent call first):
+  <no Python frame>
+
+Running numba with 16 workers
+Fatal Python error: Failed to import encodings module
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fd3d734c740 [python] (most recent call first):
+  <no Python frame>
+

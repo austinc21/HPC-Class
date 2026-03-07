@@ -1,0 +1,6 @@
+method,workers,bins,N,runtime
+numba,1,100,1000000000,
+numba,2,100,1000000000,
+numba,4,100,1000000000,
+numba,8,100,1000000000,
+numba,16,100,1000000000,
