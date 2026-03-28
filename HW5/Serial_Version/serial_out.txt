@@ -1,0 +1,10 @@
+Running N=128
+Running N=256
+Running N=512
+Running N=1024
+Running N=2048
+Running N=4096
+Running N=8192
+Running N=16384
+Running N=32768
+slurmstepd-c-10-01: error: *** JOB 3452531 ON c-10-01 CANCELLED AT 2026-03-27T21:32:59 DUE TO TIME LIMIT ***

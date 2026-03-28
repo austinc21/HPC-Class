@@ -1,0 +1,9 @@
+Running threads=1 N=10000
+Running threads=2 N=10000
+Running threads=4 N=10000
+Running threads=8 N=10000
+Running threads=16 N=10000
+Running threads=32 N=10000
+Running threads=64 N=10000
+Running threads=128 N=10000
+Done!

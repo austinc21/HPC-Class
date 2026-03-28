@@ -1,0 +1,9 @@
+Running ranks=1 N=10000
+Running ranks=2 N=10000
+Running ranks=4 N=10000
+Running ranks=8 N=10000
+Running ranks=16 N=10000
+Running ranks=32 N=10000
+Running ranks=64 N=10000
+Running ranks=128 N=10000
+Done!
