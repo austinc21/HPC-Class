@@ -1,0 +1,4 @@
+Method ObservedOrder Notes
+Euler 1.00556128 observed_from_loglog_fit
+RK2 2.00992167 observed_from_loglog_fit
+RK4 4.05871451 observed_from_loglog_fit
