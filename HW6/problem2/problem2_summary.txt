@@ -1,0 +1,4 @@
+Method x_min Notes
+Euler -1.9999849999 estimated_from_real_axis_scan
+RK2 -1.9999849999 estimated_from_real_axis_scan
+RK4 -2.7852889264 estimated_from_real_axis_scan

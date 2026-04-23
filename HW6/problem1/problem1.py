@@ -4,15 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# =========================================================
-# Save everything in the same folder as this script
-# =========================================================
+# save everything in the folder where script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-# =========================================================
-# GPU detection with graceful fallback
-# =========================================================
+# detects GPU, if GPU is not present or CuPy is not installed, it will only use cpu
 try:
     import cupy as cp
     try:
@@ -26,7 +22,6 @@ except ImportError:
     cp = None
     GPU_AVAILABLE = False
 
-
 def get_xp(use_gpu=False):
     if use_gpu and GPU_AVAILABLE:
         return cp
@@ -34,37 +29,31 @@ def get_xp(use_gpu=False):
         print("GPU requested, but CuPy/GPU is not available. Falling back to CPU.")
     return np
 
-
 def sync_if_gpu(xp):
     if GPU_AVAILABLE and xp is cp:
         cp.cuda.Stream.null.synchronize()
 
 
-# =========================================================
-# Problem definition
-# y' = -y , y(0)=1 , exact solution y(t)=exp(-t)
-# =========================================================
+# Original ODE
 def f(t, y):
     return -y
 
-
+# Exact Solution with IC y(0) = 1 
 def exact_solution(t):
     return np.exp(-t)
 
 
-# =========================================================
-# One-step methods
-# =========================================================
+# Forward Euler eq 3.4 in numerical methods
 def euler_step(f, t, y, dt):
     return y + dt * f(t, y)
 
-
+# RK2 eq 3.24 in numerical methods
 def rk2_step(f, t, y, dt):
     k1 = f(t, y)
     k2 = f(t + 0.5 * dt, y + 0.5 * dt * k1)
     return y + dt * k2
 
-
+# RK4 eq 3.26 in numerical methods
 def rk4_step(f, t, y, dt):
     k1 = f(t, y)
     k2 = f(t + 0.5 * dt, y + 0.5 * dt * k1)
@@ -73,10 +62,7 @@ def rk4_step(f, t, y, dt):
     return y + (dt / 6.0) * (k1 + 2.0 * k2 + 2.0 * k3 + k4)
 
 
-# =========================================================
-# Generic solver
-# N=1 is the scalar homework problem
-# =========================================================
+# Generic solution
 def solve_ivp(step_func, dt, use_gpu=False, N=1):
     xp = get_xp(use_gpu)
 
@@ -98,9 +84,7 @@ def solve_ivp(step_func, dt, use_gpu=False, N=1):
     return cp.asnumpy(y)
 
 
-# =========================================================
-# Validation: compare CPU and GPU results
-# =========================================================
+#Validate cpu and gpu results
 def validate_cpu_gpu(dt=2.0**(-8), N=1):
     methods = {
         "Euler": euler_step,
@@ -111,22 +95,19 @@ def validate_cpu_gpu(dt=2.0**(-8), N=1):
     print("\nCPU vs GPU validation")
     print("-" * 70)
 
-    if not GPU_AVAILABLE:
+    if not GPU_AVAILABLE: #skipping if no GPU
         print("GPU validation skipped: CuPy/GPU not available.")
         return
 
     print(f"{'Method':>8s} {'CPU Final Value':>20s} {'GPU Final Value':>20s} {'|diff|':>12s}")
     for name, method in methods.items():
-        y_cpu = solve_ivp(method, dt, use_gpu=False, N=N)[0]
-        y_gpu = solve_ivp(method, dt, use_gpu=True, N=N)[0]
+        y_cpu = solve_ivp(method, dt, use_gpu=False, N=N)[0] #no gpu
+        y_gpu = solve_ivp(method, dt, use_gpu=True, N=N)[0] # with gpu
         diff = abs(y_cpu - y_gpu)
         print(f"{name:>8s} {y_cpu:20.12e} {y_gpu:20.12e} {diff:12.4e}")
 
 
-# =========================================================
-# Convergence study
-# dt = 2^{-n}, n = 4,...,10
-# =========================================================
+# convergence
 def convergence_study(use_gpu=False, N=1, save_filename=None):
     if save_filename is None:
         save_filename = os.path.join(SCRIPT_DIR, "problem1_convergence.txt")
@@ -169,9 +150,7 @@ def convergence_study(use_gpu=False, N=1, save_filename=None):
     return results
 
 
-# =========================================================
-# Observed order from log-log fit
-# =========================================================
+
 def compute_orders(results, save_filename=None):
     if save_filename is None:
         save_filename = os.path.join(SCRIPT_DIR, "problem1_orders.txt")
@@ -200,9 +179,7 @@ def compute_orders(results, save_filename=None):
     return orders
 
 
-# =========================================================
-# Timing helper
-# =========================================================
+# timing
 def time_method(step_func, dt, use_gpu=False, N=1, repeats=3):
     xp = get_xp(use_gpu)
     best_time = float("inf")
@@ -221,9 +198,6 @@ def time_method(step_func, dt, use_gpu=False, N=1, repeats=3):
     return best_time
 
 
-# =========================================================
-# Timing study
-# =========================================================
 def timing_study(N=1, repeats=3, save_filename=None):
     if save_filename is None:
         save_filename = os.path.join(SCRIPT_DIR, "problem1_timing.txt")
@@ -279,9 +253,6 @@ def timing_study(N=1, repeats=3, save_filename=None):
     return timing_results
 
 
-# =========================================================
-# Smallest-dt timing summary
-# =========================================================
 def print_smallest_dt_table(timing_results):
     print("\nSmallest-dt timing summary")
     print("-" * 70)
@@ -300,9 +271,7 @@ def print_smallest_dt_table(timing_results):
             print(f"{method_name:>8s} {cpu_time:18.6e}")
 
 
-# =========================================================
-# Plot convergence
-# =========================================================
+#convergence plot
 def plot_convergence(results, filename=None):
     if filename is None:
         filename = os.path.join(SCRIPT_DIR, "problem1_error_plot.png")
@@ -336,9 +305,7 @@ def plot_convergence(results, filename=None):
     print(f"Saved convergence plot to: {filename}")
 
 
-# =========================================================
-# Plot timing
-# =========================================================
+#plot timing
 def plot_timing(timing_results, filename=None):
     if filename is None:
         filename = os.path.join(SCRIPT_DIR, "problem1_timing_plot.png")
@@ -364,9 +331,6 @@ def plot_timing(timing_results, filename=None):
     print(f"Saved timing plot to: {filename}")
 
 
-# =========================================================
-# Main
-# =========================================================
 if __name__ == "__main__":
     print("Problem 1: Explicit solver verification")
     print("=" * 50)
@@ -377,7 +341,6 @@ if __name__ == "__main__":
     else:
         print("GPU is not available. Running CPU-only version.")
 
-    # Keep N=1 for the actual scalar homework problem
     N = 1
 
     validate_cpu_gpu(dt=2.0**(-8), N=N)

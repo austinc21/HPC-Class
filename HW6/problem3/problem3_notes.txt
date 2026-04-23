@@ -1,0 +1,7 @@
+Problem 3 Notes
+================
+
+This problem integrates a batch of independent logistic IVPs using vectorized RK4.
+For small N, GPU overhead such as memory setup, synchronization, and kernel launches can dominate.
+For large N, the GPU can become faster because many trajectories are evolved in parallel.
+The crossover point depends on problem size and hardware.
