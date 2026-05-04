@@ -1,0 +1,69 @@
+Job started:
+Mon May  4 17:10:23 CDT 2026
+Running on node:
+g-03-05
+Working directory:
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/CuPy_optimize
+Activating conda environment:
+Python being used:
+/home/jac190017/miniconda3/envs/hpc-final/bin/python
+Python 3.11.9
+Checking GPU with nvidia-smi:
+Mon May  4 17:10:32 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   33C    P0             25W /  250W |       0MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking CuPy GPU count:
+1
+Running cupy_compare.py:
+getEQU_ISOchange benchmark
+--------------------------
+X:    0.5
+M_BH: 1000000.0
+CuPy available: True
+
+Runtime
+-------
+original:    419.055501 seconds
+Hughes:      19.220970 seconds (21.80x)
+tripleDiff:  16.711909 seconds (25.08x)
+CuPy:        34.626546 seconds (12.10x)
+
+Outputs
+-------
+original dXdt:   -2.030271865236e-10
+Hughes dXdt:     -2.030271840441e-10
+tripleDiff dXdt: -2.030271840441e-10
+CuPy dXdt:       -2.030271840441e-10
+
+original dMdt:   1.566078706266e-04
+Hughes dMdt:     1.566078706266e-04
+tripleDiff dMdt: 1.566078706266e-04
+CuPy dMdt:       1.566078706266e-04
+
+Difference from original
+------------------------
+Hughes dXdt error:     2.479489783505e-18 match=True
+Hughes dMdt error:     0.000000000000e+00 match=True
+tripleDiff dXdt error: 2.479489783505e-18 match=True
+tripleDiff dMdt error: 0.000000000000e+00 match=True
+CuPy dXdt error:       2.479489783505e-18 match=True
+CuPy dMdt error:       0.000000000000e+00 match=True
+Job finished:
+Mon May  4 17:18:59 CDT 2026
