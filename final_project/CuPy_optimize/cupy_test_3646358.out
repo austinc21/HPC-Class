@@ -1,0 +1,40 @@
+Job started:
+Mon May  4 16:33:21 CDT 2026
+Running on node:
+g-01-05
+Activating conda environment:
+Python being used:
+/home/jac190017/miniconda3/envs/hpc-final/bin/python
+Python 3.11.15
+Testing CuPy import:
+cupy import works
+Checking GPU with nvidia-smi:
+Mon May  4 16:33:35 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:07:00.0 Off |                    0 |
+| N/A   29C    P0             40W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Checking CuPy GPU count:
+1
+Running test_cupy.py:
+CuPy array: [1 2 3 4 5]
+Squared: [ 1  4  9 16 25]
+NumPy squared: [ 1  4  9 16 25]
+Results match: True
+Job finished:
+Mon May  4 16:33:41 CDT 2026
