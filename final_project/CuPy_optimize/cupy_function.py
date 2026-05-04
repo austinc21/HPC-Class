@@ -1,4 +1,10 @@
 import numpy as np
+try:
+    import cupy as cp
+    CUPY_AVAILABLE = True
+except ImportError:
+    cp = np
+    CUPY_AVAILABLE = False
 import math
 import matplotlib.pyplot as plt
 #import sympy as sym
@@ -6,6 +12,12 @@ from scipy.interpolate import interp1d
 from scipy import integrate
 import matplotlib.patches as mpatches
 import pickle
+
+
+def _asnumpy(arr):
+    if CUPY_AVAILABLE:
+        return cp.asnumpy(arr)
+    return np.asarray(arr)
 
 # Start of Hughes Functions
 def rISCOpro(a):
@@ -251,13 +263,14 @@ def get_triple_diff_lc_array(e, M, x0, x_arr):
     c_speed = 2.998e8
     sec_per_yr = 3.15576e7
     sigma = get_sigma(M)
-    n = np.sqrt(2*e)*((sigma*1000)**5)*sec_per_yr
-    d = (c_speed**2)*(M_sun*Grav_const)*np.pi
+    x_arr = cp.asarray(x_arr)
+    n = cp.sqrt(2*e)*((sigma*1000)**5)*sec_per_yr
+    d = (c_speed**2)*(M_sun*Grav_const)*cp.pi
     xc = (1/2*e)/((sigma/(2.998e5))**(2))
-    R = np.log(x_arr/xc)
-    R0 = np.log(x0/xc)
+    R = cp.log(x_arr/xc)
+    R0 = cp.log(x0/xc)
     f = 1 - R/R0
-    return n*f/d
+    return _asnumpy(n*f/d)
 
 #Start of get dXdt/dMdt functions
 
