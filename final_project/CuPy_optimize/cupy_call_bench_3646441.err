@@ -1,7 +1,0 @@
-/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:67: RuntimeWarning: divide by zero encountered in scalar divide
-  Lz = n/d
-/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:72: RuntimeWarning: invalid value encountered in scalar multiply
-  n = (E*(a**2+r**2) - a*Lz)**2
-/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:74: RuntimeWarning: invalid value encountered in scalar multiply
-  B = r**2 + a**2*E**2 - 2*a*E*Lz + Lz**2
-slurmstepd-g-03-05: error: *** JOB 3646441 ON g-03-05 CANCELLED AT 2026-05-04T18:12:06 DUE TO TIME LIMIT ***
