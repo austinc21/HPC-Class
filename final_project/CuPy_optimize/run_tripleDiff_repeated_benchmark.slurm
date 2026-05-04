@@ -11,7 +11,7 @@
 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate hpc-final
-cd "$(dirname "$0")"
+cd "$SLURM_SUBMIT_DIR"
 
 for N in 10 100 1000 10000 100000 1000000
 do
