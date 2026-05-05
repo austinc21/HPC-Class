@@ -6,7 +6,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=8G
-#SBATCH --partition=dev,normal,cpu-preempt
+#SBATCH --partition=cpu-preempt
 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate hpc-final
