@@ -1,0 +1,4 @@
+script = tripleDiff_multiprocessing_grid.py
+processes = 8
+N = 10, processes = 8, runtime = 146.200324s
+N = 100, processes = 8, runtime = 638.038990s

@@ -4,7 +4,7 @@
 #SBATCH --error=triple_mp_cpu_%j.err
 #SBATCH --time=0:45:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=64
 #SBATCH --mem=8G
 #SBATCH --partition=cpu-preempt
 
