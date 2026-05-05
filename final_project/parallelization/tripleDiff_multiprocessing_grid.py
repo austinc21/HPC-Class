@@ -15,7 +15,7 @@ import tripleDiff_function as tf
 def make_points(n):
     n_x = max(1, int(math.floor(math.sqrt(n))))
     n_m = int(math.ceil(n / n_x))
-    x_values = np.linspace(0.0, 1.0, n_x)
+    x_values = np.linspace(0.001, 1.0, n_x)
     m_values = np.logspace(5, 8, n_m)
     points = [(x, m_bh) for x in x_values for m_bh in m_values]
     return points[:n]
