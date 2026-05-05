@@ -1,0 +1,4 @@
+script = cupy_multiprocessing_grid.py
+processes = 8
+N = 10, processes = 8, runtime = 207.142349s
+N = 100, processes = 8, runtime = 1151.415142s

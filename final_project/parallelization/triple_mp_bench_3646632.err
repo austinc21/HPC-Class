@@ -1,0 +1,49 @@
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:65: RuntimeWarning: invalid value encountered in scalar power
+  n = E*(r**2-a**2) - (r**2-2*r+a**2)*( r**2*(E**2-1)+r )**(1/2)
+/home/jac190017/HPC-Class/GitHubClone/HPC-Class/final_project/tripleDiffLC_optimize/tripleDiff_function.py:100: RuntimeWarning: invalid value encountered in scalar power
+  L = (Lz**2+Q)**(1/2)
+slurmstepd-g-01-05: error: *** JOB 3646632 ON g-01-05 CANCELLED AT 2026-05-04T23:32:22 DUE TO TIME LIMIT ***
