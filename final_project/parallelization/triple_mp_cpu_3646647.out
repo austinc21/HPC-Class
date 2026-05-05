@@ -1,0 +1,2 @@
+script = tripleDiff_multiprocessing_grid.py
+processes = 8
