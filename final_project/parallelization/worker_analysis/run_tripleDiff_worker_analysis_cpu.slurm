@@ -2,7 +2,7 @@
 #SBATCH --job-name=triple_worker_cpu
 #SBATCH --output=triple_worker_cpu_%j.out
 #SBATCH --error=triple_worker_cpu_%j.err
-#SBATCH --time=0:45:00
+#SBATCH --time=3:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64
 #SBATCH --mem=8G

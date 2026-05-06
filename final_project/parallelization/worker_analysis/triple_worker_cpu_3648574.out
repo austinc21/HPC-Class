@@ -1,0 +1,14 @@
+N = 100, processes = 1, runtime = 600.893603s
+N = 100, workers = 1, runtime = 609.752s
+N = 100, processes = 2, runtime = 374.280626s
+N = 100, workers = 2, runtime = 382.187s
+N = 100, processes = 4, runtime = 175.603837s
+N = 100, workers = 4, runtime = 183.634s
+N = 100, processes = 8, runtime = 105.435378s
+N = 100, workers = 8, runtime = 111.532s
+N = 100, processes = 16, runtime = 55.633038s
+N = 100, workers = 16, runtime = 61.141s
+N = 100, processes = 32, runtime = 33.486632s
+N = 100, workers = 32, runtime = 39.2249s
+N = 100, processes = 64, runtime = 21.053512s
+N = 100, workers = 64, runtime = 26.4171s
